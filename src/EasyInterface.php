@@ -10,5 +10,6 @@ interface EasyInterface
 	public function delete($table, $id);
 	public function update($table,$data);
 	public function addColumn($table,$name, $type);
+	public function destroy($table);
 }
 

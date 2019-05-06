@@ -88,4 +88,16 @@ class Connection implements EasyInterface
     		throw new Exception($e->getMessage());
     	}
     }
+
+    public function destroy($table)
+    {
+    	$sql = "DELETE FROM $table";
+    	try {
+    		$db = new Connection;
+    		$db = $this->pdo->prepare($sql)->execute();
+    		
+    	} catch (Exception $e) {
+    		throw new Exception($e->getMessage());
+    	}
+    }
 }

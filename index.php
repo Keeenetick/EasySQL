@@ -10,19 +10,19 @@ $id = $connection->selectById('students','2');
 $column = $connection->addColumn('students', 'phone','int');
 $create = $connection->create('students', [
 	'id'=>'1',
-	'name'=>'Den',
-	'surname'=>'Bakalo',
+	'name'=>'Example',
+	'surname'=>'Example',
 	'phone'=>'222',
 
 ]);
 $update = $connection->update('students', [
 	'id'=>'1',
-	'name'=>'Artur',
-	'surname'=>'Krets',
+	'name'=>'Example2',
+	'surname'=>'Example2',
 	'phone'=>'553535',
 
 ]);
-die();
+$destroyAll = $connection->destroy('students');
 $delete = $connection->delete('students','1');
 
 
